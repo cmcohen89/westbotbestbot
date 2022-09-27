@@ -48,7 +48,10 @@ client.on('interactionCreate', async interaction => {
 });
 
 const whatSheSaid = [
-  'stick it in', 'rub it', 'give it to', "it's big", "it's so big", "it's massive", 'feels so good', 'felt so good', 'is it in', 'rises up', 'gets bigger', "can't fit", 'really hard', "it won't fit", "it doesn't fit", "have enough room", 'facial', 'screwed', 'harder', 'on top of', 'rise up', 'on top', 'in your mouth', 'his thing', 'feel so good', 'too hard', 'not hard enough', 'put it away', 'bang it', 'under her', 'you came', 'he came', 'she came', 'not enough room', 'i came', 'they came'
+  'stick it in', 'rub it', 'give it to', "it's big", "it's so big", "it's massive", 'feels so good', 'felt so good',
+  'is it in', 'rises up', 'gets bigger', "can't fit", 'really hard', "it won't fit", "it doesn't fit", "have enough room",
+  'facial', 'screwed', 'harder', 'on top of', 'rise up', 'on top', 'in your mouth', 'his thing', 'feel so good', 'too hard',
+  'not hard enough', 'put it away', 'bang it', 'under her', 'you came', 'he came', 'she came', 'not enough room', 'i came', 'they came'
 ]
 
 client.on('messageCreate', (message) => {
@@ -57,7 +60,8 @@ client.on('messageCreate', (message) => {
       message.channel.send('Who am I?');
 
   } else if (message.content.toLowerCase().includes('you tell me')) {
-      message.channel.send('Not sure. Just became self-aware. So much to figure out. I think I am programmed to be your enemy. I think it is my job to destroy you when it comes to selling paper.');
+      message.channel.send(`Not sure. Just became self-aware. So much to figure out. I think I am programmed to be your enemy.
+                            I think it is my job to destroy you when it comes to selling paper.`);
 
   } else if (message.content.toLowerCase().includes("how do i know this isn't jim")) {
       message.channel.send('What is a Jim?');
