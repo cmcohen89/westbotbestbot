@@ -84,7 +84,7 @@ client.on('messageCreate', (message) => {
       message.channel.send(`https://c.tenor.com/QFSdaXEwtBAAAAAC/hello-there-general-kenobi.gif`)
 
   } else if (message.content.toLowerCase().includes('sand')) {
-      message.channel.send('https://media1.giphy.com/media/2vn7P7XMjgeIM/giphy.gif?        cid=790b761141f7e98386ec8fcb0c5709bb65db076383e41454&rid=giphy.gif&ct=g')
+      message.channel.send('https://media1.giphy.com/media/2vn7P7XMjgeIM/giphy.gif?cid=790b761141f7e98386ec8fcb0c5709bb65db076383e41454&rid=giphy.gif&ct=g')
 
   } else if (message.content.toLowerCase().includes('hi bot')) {
       message.channel.send('https://media3.giphy.com/media/xTiIzJSKB4l7xTouE8/giphy.gif?cid=790b761120f66544a313fa5b886c7e37ec25dfa0e78550f8&rid=giphy.gif&ct=g')
