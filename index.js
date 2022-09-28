@@ -54,6 +54,14 @@ const whatSheSaid = [
   'not hard enough', 'put it away', 'bang it', 'under her', 'you came', 'he came', 'she came', 'not enough room', 'i came', 'they came'
 ]
 
+const whatSheSaidResponse = [
+    'https://i.giphy.com/media/IjJ8FVe4HVk66yvlV2/giphy.webp',
+    'https://media2.giphy.com/media/ruZVTCF9l16xn9xfs3/giphy.gif?cid=790b7611eccf6ad1368a0d97d0301fed93e26fda355eb5f9&rid=giphy.gif&ct=g',
+    'https://media1.giphy.com/media/esR1eKgmOnxWKR627f/giphy.gif?cid=790b761177d61d7ff693a0e6b022d7a8379dea66ef60363b&rid=giphy.gif&ct=g',
+    'https://media4.giphy.com/media/elPiadNl05XWg/giphy.gif?cid=790b7611032cf277e430514791e147113b4c96b629c307ad&rid=giphy.gif&ct=g',
+    'https://c.tenor.com/AXV8YU3oITAAAAAM/thats-what-she-said.gif'
+];
+
 client.on('messageCreate', (message) => {
 
   if (message.content.toLowerCase().includes('dunmiff/sys')) {
@@ -80,9 +88,8 @@ client.on('messageCreate', (message) => {
   } else if (message.content.toLowerCase() === 'marco') {
       message.channel.send('Polo!');
 
-  } else if (
-    whatSheSaid.includes(message.content.toLowerCase())) {
-    message.channel.send('https://i.giphy.com/media/IjJ8FVe4HVk66yvlV2/giphy.webp');
+  } else if (whatSheSaid.some(v => message.content.toLowerCase().includes(v))) {
+    message.channel.send(whatSheSaidResponse[Math.floor(Math.random()*whatSheSaidResponse.length)]);
 
   } else if (message.content.toLowerCase().includes('hello there')) {
       message.channel.send(`https://c.tenor.com/QFSdaXEwtBAAAAAC/hello-there-general-kenobi.gif`)
