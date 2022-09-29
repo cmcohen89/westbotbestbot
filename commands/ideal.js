@@ -1,7 +1,7 @@
 const { SlashCommandBuilder } = require('discord.js');
 
 const ideals = [
-    'The First Ideal: Life before death, strength before weakness, journey before destination. <https://upload.wikimedia.org/wikipedia/en/3/30/Stormlight_Logo.jpg>',
+    'The First Ideal: Life before death, strength before weakness, journey before destination. https://upload.wikimedia.org/wikipedia/en/3/30/Stormlight_Logo.jpg',
     'The Second Ideal (Windrunners): I will protect those who cannot protect themselves. https://static.wikia.nocookie.net/stormlightarchive/images/5/50/Ideal-Essence-1.png/revision/latest?cb=20130704012647',
     'The Second Ideal (Skybreakers): I will put the law before all else. https://static.wikia.nocookie.net/stormlightarchive/images/7/72/Ideal-Essence-2.png/revision/latest?cb=20130704012649',
     'The Second Ideal (Edgedancers): I will remember those who have been forgotten. https://static.wikia.nocookie.net/stormlightarchive/images/4/41/Ideal-Essence-4.png/revision/latest?cb=20130704012651',
