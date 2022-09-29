@@ -88,10 +88,11 @@ const weedResponses = [
     'https://uploads.dailydot.com/1ce/74/e393853c3d858b20.gif?auto=compress&fm=gif',
     'https://y.yarn.co/f0041a7f-e26e-44be-b8ae-e3d5300060ff_text.gif',
     'https://thumbs.gfycat.com/AdmiredMediumBug-size_restricted.gif',
-    'https://i.gifer.com/MMPA.gif',
+    'https://i.gifer.com/MMPA.gif'
 ];
 
 client.on('messageCreate', (message) => {
+  if (message.author.bot === true) return;
 
   if (message.content.toLowerCase().includes('dunmiff/sys')) {
       message.channel.send('Who am I?');
@@ -109,7 +110,8 @@ client.on('messageCreate', (message) => {
             message.content.toLowerCase() === 'ahmahgahdbrah') {
 
       const replies = ['ahhbrahh', 'ahmahgahdbrahhh', 'braaaahh', 'brahh',
-                       'ahbraaaahhh', 'breeeehhh', 'brehh', 'ahhhhhbrah'];
+                       'ahbraaaahhh', 'breeeehhh', 'brehh', 'ahhhhhbrah',
+                       'brah', 'ahbrah', 'breh', 'bruh', 'ahmahgahdbrah'];
 
       message.channel.send(replies[Math.floor(Math.random()*replies.length)]);
 
