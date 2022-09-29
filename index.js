@@ -120,7 +120,7 @@ client.on('messageCreate', (message) => {
       message.channel.send(`https://c.tenor.com/sSCoPH6S6tIAAAAC/butter-robot-sad.gif`);
       message.channel.send('Oh my god.')
 
-  } else if (message.content.toLowerCase().includes('bot') && message.content.toLowerCase().includes('stop')) {
+  } else if (message.content.toLowerCase().includes('bot') && (message.content.toLowerCase().includes('stop') || message.content.toLowerCase().includes('shut'))) {
     message.channel.send('https://c.tenor.com/WtfJo0beYhgAAAAC/no-i-dont-think-i-will.gif');
 
   } else if (message.content.toLowerCase().includes('good bot')) {
