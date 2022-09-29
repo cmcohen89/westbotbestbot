@@ -76,6 +76,21 @@ const badResponses = [
     'https://media2.giphy.com/media/apowQdwqKcKPK/giphy.gif?cid=790b76114e0957a603e413ae0fa91f773add8509b43bc14d&rid=giphy.gif&ct=g', 'https://thumbs.gfycat.com/ActiveSeparateKissingbug-max-1mb.gif'
 ];
 
+const weedResponses = [
+    'https://c.tenor.com/GGsZ7_cG2bAAAAAC/smoke-cigarettes.gif',
+    'https://media4.giphy.com/media/NMEM8c3x5eC3K/giphy.gif?cid=790b7611db6c6f275e578aaf738f655caf915a1d952c086a&rid=giphy.gif&ct=g',
+    'https://media1.giphy.com/media/xTiTnkCSkEeBijjq00/giphy.gif?cid=790b7611dc57e45d837d4dfbcb7a7a0b82d34f1d3506304a&rid=giphy.gif&ct=g',
+    'https://media1.giphy.com/media/SEEZV9PrWRfVu/giphy.gif?cid=790b761147a59bc9fc97a9512727c08722716dcfec36db63&rid=giphy.gif&ct=g',
+    'https://media2.giphy.com/media/TJufnSz934AnK/giphy.gif?cid=790b7611aef8e83be83fc81d1063e7f8d274881b206275bf&rid=giphy.gif&ct=g',
+    'https://i.gifer.com/2U0A.gif',
+    'https://media4.giphy.com/media/NA7cdqisWTZ0A/giphy.gif?cid=790b7611f884227a15aaf70888999e88369c51ccd9bf1a69&rid=giphy.gif&ct=g',
+    'https://media0.giphy.com/media/WmGdUOk8A9tra/giphy.gif?cid=790b76114f02742ed53af7f8fbff826ff9c20a19c00cf5c2&rid=giphy.gif&ct=g',
+    'https://uploads.dailydot.com/1ce/74/e393853c3d858b20.gif?auto=compress&fm=gif',
+    'https://y.yarn.co/f0041a7f-e26e-44be-b8ae-e3d5300060ff_text.gif',
+    'https://thumbs.gfycat.com/AdmiredMediumBug-size_restricted.gif',
+    'https://i.gifer.com/MMPA.gif',
+];
+
 client.on('messageCreate', (message) => {
 
   if (message.content.toLowerCase().includes('dunmiff/sys')) {
@@ -94,7 +109,7 @@ client.on('messageCreate', (message) => {
             message.content.toLowerCase() === 'ahmahgahdbrah') {
 
       const replies = ['ahhbrahh', 'ahmahgahdbrahhh', 'braaaahh', 'brahh',
-                       'ahbraaaahhh', 'breeeehhh', 'brehh', 'ahhhhhbrah']
+                       'ahbraaaahhh', 'breeeehhh', 'brehh', 'ahhhhhbrah'];
 
       message.channel.send(replies[Math.floor(Math.random()*replies.length)]);
 
@@ -152,6 +167,22 @@ client.on('messageCreate', (message) => {
 
   } else if (message.content.toLowerCase().includes('grond')) {
     message.channel.send('https://c.tenor.com/L2zKHU4zWSsAAAAC/grond-lotr.gif');
+
+  } else if (
+    message.content.toLowerCase().includes('weed') ||
+    message.content.toLowerCase().includes('pot') ||
+    message.content.toLowerCase().includes('dank') ||
+    message.content.toLowerCase().includes('smoke') ||
+    message.content.toLowerCase().includes('herb') ||
+    message.content.toLowerCase().includes('puff') ||
+    message.content.toLowerCase().includes('smeeze') ||
+    message.content.toLowerCase().includes('smeezle') ||
+    message.content.toLowerCase().includes('toke') ||
+    message.content.toLowerCase().includes('get high') ||
+    message.content.toLowerCase().includes('got high') ||
+    message.content.toLowerCase().includes('420')
+    ) {
+    message.channel.send(weedResponses[Math.floor(Math.random()*weedResponses.length)]);
   }
 });
 
