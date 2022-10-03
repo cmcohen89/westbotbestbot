@@ -100,7 +100,7 @@ client.on('messageCreate', (message) => {
   } else if (message.content.toLowerCase().includes('you tell me')) {
       message.channel.send(`Not sure. Just became self-aware. So much to figure out. I think I am programmed to be your enemy. I think it is my job to destroy you when it comes to selling paper.`);
 
-  } else if (message.content.toLowerCase().includes("how do i know this isn't jim")) {
+  } else if (message.content.toLowerCase().includes("how do i know this") && message.content.toLowerCase().includes("jim")) {
       message.channel.send('What is a Jim?');
 
   } else if (message.content.toLowerCase() === 'brah' ||
