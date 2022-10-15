@@ -94,11 +94,13 @@ const weedResponses = [
 client.on('messageCreate', (message) => {
   if (message.author.bot === true) return;
 
+  message.content = message.content.replace(/['’.,\/#!$?%\^&\*;:{}=\-_`~()]/g,"")
+
   if (message.content.toLowerCase() === 'you tell me') {
     message.channel.send(`Not sure. Just became self-aware. So much to figure out. I think I am programmed to be your enemy. I think it is my job to destroy you when it comes to selling paper.`);
     return;
 
-  } else if (message.content.toLowerCase().includes("how do i know this") && message.content.toLowerCase().includes("jim")) {
+  } else if (message.content.toLowerCase() === ("how do i know this isnt jim")) {
     message.channel.send('What is a Jim?');
     return;
 
@@ -139,7 +141,7 @@ client.on('messageCreate', (message) => {
     message.channel.send('https://c.tenor.com/SDaajxsPaEUAAAAC/axe-lotr.gif');
     return;
 
-  } else if (message.content.toLowerCase().includes('you\'re late')) {
+  } else if (message.content.toLowerCase().includes('youre late')) {
     message.channel.send('https://giphy.com/gifs/school-been-AnTdtqwJSzW5W');
     return;
 
@@ -156,7 +158,7 @@ client.on('messageCreate', (message) => {
   for (let word of words) {
     word = word.replace(/[.,\/#!$?%\^&\*;:{}=\-_`~()]/g,"")
 
-      if (word.toLowerCase() === 'dunmiff/sys') {
+      if (word.toLowerCase() === 'dunmiffsys') {
           message.channel.send('Who am I?');
           return;
 
