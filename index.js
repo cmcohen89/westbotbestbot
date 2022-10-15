@@ -215,7 +215,8 @@ client.on('messageCreate', (message) => {
         word.toLowerCase() === 'toke' ||
         word.toLowerCase() === 'get high' ||
         word.toLowerCase() === 'got high' ||
-        word.toLowerCase() === '420'
+        word.toLowerCase() === '420' ||
+        word.toLowerCase() === 'ganja'
         ) {
         message.channel.send(weedResponses[Math.floor(Math.random()*weedResponses.length)]);
         return;
