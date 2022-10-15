@@ -96,53 +96,69 @@ client.on('messageCreate', (message) => {
 
   if (message.content.toLowerCase() === 'you tell me') {
     message.channel.send(`Not sure. Just became self-aware. So much to figure out. I think I am programmed to be your enemy. I think it is my job to destroy you when it comes to selling paper.`);
+    return;
 
   } else if (message.content.toLowerCase().includes("how do i know this") && message.content.toLowerCase().includes("jim")) {
     message.channel.send('What is a Jim?');
+    return;
 
   } else if (message.content.toLowerCase() === 'hello there') {
     message.channel.send(`https://c.tenor.com/QFSdaXEwtBAAAAAC/hello-there-general-kenobi.gif`)
+    return;
 
   } else if (message.content.toLowerCase() === 'hi bot' || message.content.toLowerCase() === 'hey bot' || message.content.toLowerCase() === 'hello bot') {
     message.channel.send('https://media3.giphy.com/media/xTiIzJSKB4l7xTouE8/giphy.gif?cid=790b761120f66544a313fa5b886c7e37ec25dfa0e78550f8&rid=giphy.gif&ct=g')
+    return;
 
   } else if (message.content.toLowerCase() === 'you pass butter') {
     message.channel.send(`https://c.tenor.com/sSCoPH6S6tIAAAAC/butter-robot-sad.gif`);
     message.channel.send('Oh my god.')
+    return;
 
   } else if (message.content.toLowerCase() === 'good bot') {
     message.channel.send(goodResponses[Math.floor(Math.random()*goodResponses.length)]);
+    return;
 
   } else if (message.content.toLowerCase() === 'bad bot') {
     message.channel.send(badResponses[Math.floor(Math.random()*badResponses.length)]);
+    return;
 
   } else if (message.content.toLowerCase() === 'what up') {
     message.channel.send('https://c.tenor.com/VHxRsj9wf8AAAAAC/its-always-sunny-in-philadelphia-whats-up.gif');
+    return;
 
   } else if (message.content.toLowerCase() === 'mad bot') {
     message.channel.send('https://64.media.tumblr.com/40fe682906cb0e855f752b5034eeae8c/tumblr_oza07tz18e1wzblmoo5_540.gif');
+    return;
 
   } else if (message.content.toLowerCase().includes('bot') && (message.content.toLowerCase().includes('stop') || message.content.toLowerCase().includes('shut'))) {
     message.channel.send('https://c.tenor.com/WtfJo0beYhgAAAAC/no-i-dont-think-i-will.gif');
+    return;
 
   } else if (message.content.toLowerCase().includes('you have my')) {
     message.channel.send('https://c.tenor.com/SDaajxsPaEUAAAAC/axe-lotr.gif');
+    return;
 
   } else if (message.content.toLowerCase().includes('you\'re late')) {
     message.channel.send('https://giphy.com/gifs/school-been-AnTdtqwJSzW5W');
+    return;
 
   } else if (message.content.toLowerCase().includes('you must do')) {
     message.channel.send('https://64.media.tumblr.com/a577a0087f09d9a9b9f37b5cb9c54af9/deda62a20420231a-98/s500x750/c59bee533a34a923b1b90edc142ecba97c91b9ea.gifv');
+    return;
 
   } else if (whatSheSaid.some(v => message.content.toLowerCase().includes(v))) {
     message.channel.send(whatSheSaidResponse[Math.floor(Math.random()*whatSheSaidResponse.length)]);
+    return;
   }
 
   const words = message.content.split(' ');
   for (let word of words) {
+    word = word.replace(/[.,\/#!$?%\^&\*;:{}=\-_`~()]/g,"")
 
       if (word.toLowerCase() === 'dunmiff/sys') {
           message.channel.send('Who am I?');
+          return;
 
       } else if (word.toLowerCase() === 'brah' ||
                 word.toLowerCase() === 'ahbrah' ||
@@ -155,27 +171,35 @@ client.on('messageCreate', (message) => {
                            'brah', 'ahbrah', 'breh', 'bruh', 'ahmahgahdbrah'];
 
           message.channel.send(replies[Math.floor(Math.random()*replies.length)]);
+          return;
 
       } else if (word.toLowerCase() === 'marco') {
           message.channel.send('Polo!');
+          return;
 
       } else if (word.toLowerCase() === 'sand') {
           message.channel.send('https://media1.giphy.com/media/2vn7P7XMjgeIM/giphy.gif?cid=790b761141f7e98386ec8fcb0c5709bb65db076383e41454&rid=giphy.gif&ct=g')
+          return;
 
       } else if (word.toLowerCase() === 'whore') {
           message.channel.send('https://y.yarn.co/f198dc67-0100-4902-bc24-19f44fa95f81_text.gif')
+          return;
 
       } else if (word.toLowerCase() === 'secret') {
         message.channel.send('https://thumbs.gfycat.com/HonestSmartBuffalo-max-1mb.gif');
+        return;
 
       } else if (word.toLowerCase() === 'breakfast') {
         message.channel.send('https://i.giphy.com/media/OiNW0PypI1RaE/giphy.webp');
+        return;
 
       } else if (word.toLowerCase() === ('grond')) {
         message.channel.send('https://c.tenor.com/L2zKHU4zWSsAAAAC/grond-lotr.gif');
+        return;
 
       } else if (word.toLowerCase() === ('potato') || word.toLowerCase() === ('potatoes')) {
         message.channel.send('https://images.squarespace-cdn.com/content/v1/559dc96be4b099333339097f/1439908205356-MTXC7BTMI4QSHPC3VCL3/image-asset.gif');
+        return;
 
       } else if (
         word.toLowerCase() === 'weed' ||
@@ -192,6 +216,7 @@ client.on('messageCreate', (message) => {
         word.toLowerCase() === '420'
         ) {
         message.channel.send(weedResponses[Math.floor(Math.random()*weedResponses.length)]);
+        return;
       }
   }
 
